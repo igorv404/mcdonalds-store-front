@@ -11,6 +11,14 @@ function toEditPage(id) {
     window.location.href = 'edit.html';
 }
 
+function showAlert() {
+    document.querySelector('.alert').style.width = '25vw';
+}
+
+function hideAlert() {
+    document.querySelector('.alert').style.width = '0vw';
+}
+
 function createDishElem(arr) {
     let index = 0;
     arr.forEach(element => {
@@ -45,7 +53,7 @@ function searchDish() {
     document.querySelector('#price').checked = false;
     let search = document.querySelector('#search').value;
     if (search) {
-        let reg = new RegExp(`${search}`, 'g');
+        let reg = new RegExp(`${search}`);
         filterArr = dishes.filter(element => reg.test(element.name) === true);
         document.querySelector('.content').replaceChildren();
         createDishElem(filterArr);
@@ -123,6 +131,8 @@ async function deleteDish(id, index) {
                 dishes.splice(index, 1);
                 createDishElem(dishes);
                 getTotalPrice(dishes);
+            } else {
+                showAlert();
             }
         });
 }

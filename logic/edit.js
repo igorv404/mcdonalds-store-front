@@ -49,6 +49,8 @@ async function updateDish() {
                     dishImage.value = '';
                     localStorage.removeItem('id');
                     window.location.href = 'index.html';
+                } else {
+                    showAlert();
                 }
             })
             .catch(() => {
