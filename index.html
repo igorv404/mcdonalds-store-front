@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McDonald's home</title>
+    <link href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>McDonald's</h1>
+        <button onclick="toCreatePage()">create</button>
+    </header>
+    <main>
+        <aside>
+            <div class="searchSec">
+                <input type="text" id="search" placeholder="Search...">
+                <button onclick="searchDish()">Search</button>
+            </div>
+            <h2>Sort by:</h2>
+            <div class="sortCat">
+                <input type="checkbox" id="name" onclick="sortByName()">
+                <label for="name">name</label>
+            </div>
+            <div class="sortCat">
+                <input type="checkbox" id="price" onclick="sortByPrice()">
+                <label for="price">price</label>
+            </div>
+            <p>Total price: <span id="totalPrice"></span></p>
+        </aside>
+        <div class="content"></div>
+    </main>
+    <script src="logic/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+@import "font.css";
+@import "header.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+}
+
+/** aside **/
+
+aside {
+    width: 25vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 15vh;
+    border-right: 0.2vw solid crimson;
+    padding: 5vh 3vw 0;
+    text-align: left;
+}
+
+.searchSec {
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3vh;
+}
+
+.searchSec input[type=text] {
+    width: 70%;
+    height: 100%;
+    border-radius: 1vw;
+    border: none;
+    padding-left: 1vw;
+    outline-style: none;
+    color: crimson;
+    background-color: yellow;
+}
+
+.searchSec button {
+    width: 25%;
+    height: 100%;
+    background-color: crimson;
+    border: none;
+    border-radius: 1vw;
+    font-weight: bold;
+    color: yellow;
+    transition: 0.3s;
+}
+
+.searchSec button:hover {
+    background-color: transparent;
+    border: 0.2vw solid crimson;
+    color: crimson;
+}
+
+aside input[type=text]::placeholder {
+    color: crimson;
+}
+
+aside h2 {
+    color: crimson;
+    margin-bottom: 1vh;
+}
+
+.sortCat {
+    display: flex;
+}
+
+.sortCat input {
+    margin-right: 0.5vw;
+    cursor: pointer;
+}
+
+.sortCat input:checked {
+    accent-color: crimson;
+}
+
+.sortCat label {
+    color: crimson;
+    cursor: pointer;
+}
+
+.sortCat:last-of-type {
+    margin-bottom: 3vh;
+}
+
+aside p {
+    font-weight: bold;
+    color: crimson;
+}
+
+aside p span {
+    font-weight: normal;
+}
+
+/** content **/
+
+.content {
+    display: grid;
+    padding: 5vh 3vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3vw;
+    grid-row-gap: 3vh;
+}
+
+.item {
+    width: 20vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    border: 0.2vw solid crimson;
+    border-radius: 1vw;
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    margin-bottom: 2vh;
+}
+
+.item h2 {
+    margin-left: 1vw;
+    color: crimson;
+}
+
+.item p {
+    color: crimson;
+    margin: 2vh 0 2vh 1vw;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1vw;
+}
+
+.actions button {
+    width: 45%;
+    height: 5vh;
+    border: none;
+    border-radius: 1vw;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.actions button:hover {
+    color: yellow;
+    background-color: green;
+}
+
+.edit {
+    background-color: yellow;
+    color: crimson;
+}
+
+.delete {
+    background-color: crimson;
+    color: yellow;
+}

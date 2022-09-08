@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create page</title>
+    <link href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/create.css">
+</head>
+<body>
+    <header>
+        <h1 onclick="toMainPage()">McDonald's</h1>
+    </header>
+    <main>
+        <input type="text" placeholder="Write a name" id="nameField">
+        <input type="number" min="1" placeholder="Write a price" id="priceField">
+        <input type="text" placeholder="Write image link" id="imgField">
+        <button onclick="createDish()">Add new dish</button>
+    </main>
+    <div class="alert" onclick="hideAlert()"></div>
+    <script src="logic/create.js"></script>
+</body>
+</html>
