@@ -66,9 +66,9 @@ function searchDish() {
 function sortNameAl(arr) {
     document.querySelector('#price').checked = false;
     arr.sort((a, b) => {
-        if (a.name > b.name) {
+        if (a.name.toLowerCase() > b.name.toLowerCase()) {
             return 1;
-        } else if (a.name < b.name) {
+        } else if (a.name.toLowerCase() < b.name.toLowerCase()) {
             return -1;
         } else {
             return 0;
